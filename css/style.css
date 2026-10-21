@@ -149,7 +149,10 @@ section.soft { background: var(--bg-soft); }
 .empty { color: var(--muted); grid-column: 1 / -1; text-align: center; padding: 40px 0; }
 
 /* about */
+.greeting { display: flex; gap: 40px; align-items: flex-start; }
+.greeting-photo { flex: 0 0 220px; width: 220px; aspect-ratio: 3/4; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); }
 .greeting p { margin: 0 0 12px; }
+@media (max-width: 640px) { .greeting { flex-direction: column; align-items: center; gap: 24px; } .greeting-photo { width: 180px; flex-basis: auto; } }
 .greeting .sign { text-align: right; font-family: var(--font-eb); margin-top: 20px; }
 .history { list-style: none; padding: 0; margin: 0; border-left: 3px solid var(--primary); }
 .history > li { padding: 0 0 20px 20px; position: relative; }

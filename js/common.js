@@ -92,7 +92,8 @@ const PAGES = {
 
   about() {
     $("#about-intro").textContent = SITE.intro;
-    $("#greeting").innerHTML = GREETING.paragraphs.map((t) => `<p>${esc(t)}</p>`).join("") + `<p class="sign">${esc(GREETING.name)}</p>`;
+    $("#greeting").innerHTML = (GREETING.photo ? `<img class="greeting-photo" src="${esc(GREETING.photo)}" alt="${esc(GREETING.name)}">` : "") +
+      `<div>${GREETING.paragraphs.map((t) => `<p>${esc(t)}</p>`).join("")}<p class="sign">${esc(GREETING.name)}</p></div>`;
     $("#business").innerHTML = BUSINESS.map((b) => `<article class="card"><h3>${esc(b.title)}</h3><p>${esc(b.desc)}</p></article>`).join("");
     $("#history").innerHTML = HISTORY.map((h) => `<li><strong>${esc(h.year)}</strong><ul>${h.items.map((i) => `<li>${esc(i)}</li>`).join("")}</ul></li>`).join("");
     $("#schedule").innerHTML = SCHEDULE.map((s) => `<div class="org-row"><strong>${esc(s.month)}</strong><span>${esc(s.items)}</span></div>`).join("");
