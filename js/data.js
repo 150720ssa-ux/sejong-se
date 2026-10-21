@@ -27,7 +27,7 @@ const SITE = {
 const HERO_IMAGES = [
   "images/2026-muju-group.jpg",
   "images/2026-muju-hackathon.jpg",
-  "images/2026-muju-rafting.jpg",
+  "images/2025-hodo-workshop.jpg",
 ];
 
 // 메인 하단 관련기관 링크
