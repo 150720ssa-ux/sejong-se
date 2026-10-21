@@ -61,6 +61,7 @@ const memberCard = (m) => `
 const postCard = (p) => `
   <article class="card post">
     ${p.image ? `<img src="${esc(p.image)}" alt="" loading="lazy">` : ""}
+    ${p.credit ? `<small class="credit">${esc(p.credit)}</small>` : ""}
     <div class="tags"><span class="tag tag-${p.category === "공지" ? "notice" : "cert"}">${esc(p.category)}</span><time>${esc(p.date)}</time></div>
     <h3>${esc(p.title)}</h3>
     <p>${esc(p.body)}</p>

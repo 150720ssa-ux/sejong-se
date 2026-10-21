@@ -132,6 +132,7 @@ section.soft { background: var(--bg-soft); }
 .card h3 { margin: 8px 0 6px; font-size: 1.1rem; }
 .card p { margin: 0; color: var(--muted); }
 .post p { white-space: pre-line; }
+.post .credit { display: block; margin: -8px 0 10px; font-size: .75rem; color: var(--muted); }
 .card .meta { margin-top: 8px; font-size: .9rem; }
 .member { position: relative; }
 .member:has(.svi-badge) .tags, .member:has(.svi-badge) h3 { padding-right: 64px; }
