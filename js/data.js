@@ -34,6 +34,7 @@ const HERO_IMAGES = [
 const RELATED_ORGS = [
   { name: "세종특별자치시", url: "https://www.sejong.go.kr" },
   { name: "한국사회적기업진흥원", url: "https://www.socialenterprise.or.kr" },
+  { name: "사회적기업 포털", url: "https://www.seis.or.kr" },
   { name: "고용노동부", url: "https://www.moel.go.kr" },
 ];
 
