@@ -133,6 +133,11 @@ section.soft { background: var(--bg-soft); }
 .card p { margin: 0; color: var(--muted); }
 .post p { white-space: pre-line; }
 .card .meta { margin-top: 8px; font-size: .9rem; }
+.member { position: relative; }
+.member:has(.svi-badge) .tags, .member:has(.svi-badge) h3 { padding-right: 64px; }
+.svi-badge { position: absolute; top: 12px; right: 12px; width: 56px; display: flex; flex-direction: column; align-items: center; }
+.svi-badge img { width: 44px; height: auto; }
+.svi-badge b { margin-top: 2px; font-size: .68rem; color: #b3261e; white-space: nowrap; }
 .member-logo { height: 64px; display: flex; align-items: center; margin-bottom: 10px; }
 .member-logo img { max-height: 56px; max-width: 70%; object-fit: contain; }
 .member h3 a { color: var(--text); text-decoration: none; }

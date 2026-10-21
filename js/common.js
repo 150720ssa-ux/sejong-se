@@ -49,6 +49,7 @@ function renderLayout() {
 
 const memberCard = (m) => `
   <article class="card member">
+    ${m.svi ? `<span class="svi-badge" title="2026 사회적가치지표(SVI) 측정 우수"><img src="images/svi-excellent.png" alt=""><b>SVI 우수</b></span>` : ""}
     ${m.logo ? `<div class="member-logo"><img src="${esc(m.logo)}" alt="${esc(m.name)} 로고" loading="lazy"></div>` : ""}
     <div class="tags">${m.type ? `<span class="tag tag-${m.type === "인증" ? "cert" : "pre"}">${esc(m.type)}사회적기업</span>` : ""}${m.field ? `<span class="tag">${esc(m.field)}</span>` : ""}</div>
     <h3>${m.url ? `<a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.name)}</a>` : esc(m.name)}</h3>
