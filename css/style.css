@@ -132,6 +132,11 @@ section.soft { background: var(--bg-soft); }
 .card h3 { margin: 8px 0 6px; font-size: 1.1rem; }
 .card p { margin: 0; color: var(--muted); }
 .card .meta { margin-top: 8px; font-size: .9rem; }
+.member-logo { height: 64px; display: flex; align-items: center; margin-bottom: 10px; }
+.member-logo img { max-height: 56px; max-width: 70%; object-fit: contain; }
+.member h3 a { color: var(--text); text-decoration: none; }
+.member h3 a::after { content: " ↗"; font-size: .8em; color: var(--primary); }
+.member h3 a:hover { color: var(--primary); }
 .post img { border-radius: 4px; margin-bottom: 12px; aspect-ratio: 16/10; object-fit: cover; width: 100%; }
 .tags { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; font-size: .85rem; color: var(--muted); }
 .tag { display: inline-block; padding: 2px 10px; border-radius: 999px; background: #f1f1f1; color: var(--muted); font-size: .8rem; font-family: var(--font-b); margin-right: 6px; }

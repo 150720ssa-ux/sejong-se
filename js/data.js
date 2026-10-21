@@ -120,30 +120,31 @@ const SCHEDULE = [
 //  type: 인증 / 예비
 //  field: 분야 (아래 FIELDS 중 하나)
 //  url: 홈페이지 없으면 ""
+//  logo: images/logos 폴더의 로고 (없으면 생략)
 // ------------------------------------------------------------
 const FIELDS = ["제조·도소매", "환경·복지서비스", "교육·문화예술", "디자인·인쇄출판", "시설·건설"];
 
 const MEMBERS = [
   { name: "도아협동조합", ceo: "변미정", type: "인증", field: "제조·도소매", desc: "교육·서비스업, 화장품 제조", tel: "", url: "" },
   { name: "베리웰사회적협동조합", ceo: "황현중", type: "인증", field: "디자인·인쇄출판", desc: "HACCP 인증 세종약과 제조, 디자인·인쇄·판촉물", tel: "", url: "" },
-  { name: "가람수풀생태환경연구소", ceo: "황성아", type: "인증", field: "환경·복지서비스", desc: "환경·산림교육, 산림치유, 노르딕워킹 프로그램, 학술연구", tel: "", url: "" },
+  { name: "가람수풀생태환경연구소", ceo: "황성아", type: "인증", field: "환경·복지서비스", desc: "환경·산림교육, 산림치유, 노르딕워킹 프로그램, 학술연구", tel: "", url: "http://www.garamsoop.com", logo: "images/logos/garamsoop.png" },
   { name: "㈜한그래", ceo: "허혜진", type: "인증", field: "교육·문화예술", desc: "생활나전공예·전통 장정 등 전통문화예술 상품과 체험교육", tel: "", url: "" },
-  { name: "㈜해피엠", ceo: "한근상", type: "인증", field: "제조·도소매", desc: "한우·한돈 식육포장처리, 안전한 먹거리 제공", tel: "", url: "" },
+  { name: "㈜해피엠", ceo: "한근상", type: "인증", field: "제조·도소매", desc: "한우·한돈 식육포장처리, 안전한 먹거리 제공", tel: "", url: "https://happim.co.kr", logo: "images/logos/happim.jpg" },
   { name: "㈜미소드림", ceo: "윤한순", type: "인증", field: "환경·복지서비스", desc: "건물위생·시설관리, 고령자 등 취약계층 일자리 제공", tel: "", url: "" },
-  { name: "세종아이콘", ceo: "김경오", type: "인증", field: "디자인·인쇄출판", desc: "인쇄, 디자인", tel: "", url: "" },
-  { name: "공유 사회적협동조합", ceo: "김온유", type: "인증", field: "제조·도소매", desc: "점보롤 화장지 제조", tel: "", url: "" },
+  { name: "세종아이콘", ceo: "김경오", type: "인증", field: "디자인·인쇄출판", desc: "인쇄, 디자인", tel: "", url: "https://blog.naver.com/sejongicon" },
+  { name: "공유 사회적협동조합", ceo: "김온유", type: "인증", field: "제조·도소매", desc: "점보롤 화장지 제조", tel: "", url: "https://www.gongumall.kr" },
   { name: "㈜디에스", ceo: "김태용", type: "인증", field: "제조·도소매", desc: "빗자루 제조, 도·소매업", tel: "", url: "" },
   { name: "㈜영풍위생방역", ceo: "박상우", type: "인증", field: "환경·복지서비스", desc: "소독, 건물위생관리", tel: "", url: "" },
-  { name: "(사)이음", ceo: "서원주", type: "인증", field: "교육·문화예술", desc: "교육, 학술연구, 행사", tel: "", url: "" },
-  { name: "㈜해례", ceo: "김형기", type: "예비", field: "교육·문화예술", desc: "소프트웨어 개발, 애니메이션 제작, 교육·서비스업", tel: "", url: "" },
-  { name: "바른기업", ceo: "이윤희", type: "예비", field: "시설·건설", desc: "전기·전문소방공사", tel: "", url: "" },
-  { name: "에픽라이즈", ceo: "이현민", type: "예비", field: "교육·문화예술", desc: "전시·기획", tel: "", url: "" },
-  { name: "㈜PAL문화유산센터", ceo: "장동우", type: "예비", field: "교육·문화예술", desc: "인문과학 연구개발", tel: "", url: "" },
-  { name: "(사)한국나눔복지연합회 아이씨티사업소", ceo: "김대영", type: "", field: "", desc: "", tel: "", url: "" },
-  { name: "해봄협동조합", ceo: "조현희", type: "", field: "", desc: "", tel: "", url: "" },
-  { name: "세종씨이엠", ceo: "임영택", type: "", field: "", desc: "", tel: "", url: "" },
-  { name: "(사)에코디자인연구소", ceo: "오완열", type: "", field: "", desc: "", tel: "", url: "" },
-  { name: "투해펀", ceo: "노광호", type: "", field: "", desc: "", tel: "", url: "" },
+  { name: "(사)이음", ceo: "서원주", type: "인증", field: "교육·문화예술", desc: "교육, 학술연구, 행사", tel: "", url: "http://eumse.co.kr", logo: "images/logos/eum.png" },
+  { name: "㈜해례", ceo: "김형기", type: "인증", field: "교육·문화예술", desc: "소프트웨어 개발, 애니메이션 제작, 교육·서비스업", tel: "", url: "https://www.funt.co.kr" },
+  { name: "바른기업", ceo: "이윤희", type: "인증", field: "시설·건설", desc: "전기·전문소방공사", tel: "", url: "" },
+  { name: "에픽라이즈", ceo: "이현민", type: "예비", field: "교육·문화예술", desc: "전시·기획", tel: "", url: "http://www.eficraiz.com", logo: "images/logos/epicraise.png" },
+  { name: "㈜PAL문화유산센터", ceo: "장동우", type: "예비", field: "교육·문화예술", desc: "인문과학 연구개발", tel: "", url: "https://www.palhcinc.com", logo: "images/logos/pal.png" },
+  { name: "(사)한국나눔복지연합회 아이씨티사업소", ceo: "김대영", type: "예비", field: "", desc: "", tel: "", url: "" },
+  { name: "해봄협동조합", ceo: "조현희", type: "예비", field: "교육·문화예술", desc: "", tel: "", url: "http://www.haebomtv.com", logo: "images/logos/haebom.png" },
+  { name: "㈜세종씨이엠", ceo: "임영택", type: "인증", field: "환경·복지서비스", desc: "시설(건물) 종합관리, 청소·소독, 기계설비 성능점검", tel: "", url: "http://sjcem.co.kr", logo: "images/logos/sjcem.png" },
+  { name: "(사)에코디자인연구소", ceo: "오완열", type: "인증", field: "디자인·인쇄출판", desc: "인쇄·판촉물, 사무용 가구, 배전반·자동제어반", tel: "", url: "" },
+  { name: "㈜투해펀", ceo: "노광호", type: "인증", field: "교육·문화예술", desc: "화랑, 출판, 게임 소프트웨어 개발, 문화마케팅", tel: "", url: "" },
 ];
 
 // ------------------------------------------------------------
