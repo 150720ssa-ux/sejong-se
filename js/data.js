@@ -125,7 +125,7 @@ const SCHEDULE = [
 const FIELDS = ["제조·도소매", "환경·복지서비스", "교육·문화예술", "디자인·인쇄출판", "시설·건설"];
 
 const MEMBERS = [
-  { name: "도아협동조합", ceo: "변미정", type: "인증", field: "제조·도소매", desc: "교육·서비스업, 화장품 제조", tel: "", url: "" },
+  { name: "도아협동조합", ceo: "변미정", type: "인증", field: "제조·도소매", desc: "교육·서비스업, 화장품 제조", tel: "", url: "", logo: "images/logos/doa.png" },
   { name: "베리웰사회적협동조합", ceo: "황현중", type: "인증", field: "디자인·인쇄출판", desc: "HACCP 인증 세종약과 제조, 디자인·인쇄·판촉물", tel: "", url: "" },
   { name: "가람수풀생태환경연구소", ceo: "황성아", type: "인증", field: "환경·복지서비스", desc: "환경·산림교육, 산림치유, 노르딕워킹 프로그램, 학술연구", tel: "", url: "http://www.garamsoop.com", logo: "images/logos/garamsoop.png" },
   { name: "㈜한그래", ceo: "허혜진", type: "인증", field: "교육·문화예술", desc: "생활나전공예·전통 장정 등 전통문화예술 상품과 체험교육", tel: "", url: "" },
