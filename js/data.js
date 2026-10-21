@@ -135,7 +135,7 @@ const MEMBERS = [
   { name: "가람수풀생태환경연구소", ceo: "황성아", type: "인증", field: "환경·복지서비스", desc: "환경·산림교육, 산림치유, 노르딕워킹 프로그램, 학술연구", tel: "", url: "http://www.garamsoop.com", logo: "images/logos/garamsoop.png", svi: true },
   { name: "㈜한그래", ceo: "허혜진", type: "인증", field: "교육·문화예술", desc: "생활나전공예·전통 장정 등 전통문화예술 상품과 체험교육", tel: "", url: "", logo: "images/logos/hangrae.jpg", svi: true },
   { name: "㈜해피엠", ceo: "한근상", type: "인증", field: "제조·도소매", desc: "한우·한돈 식육포장처리, 안전한 먹거리 제공", tel: "", url: "https://happim.co.kr", logo: "images/logos/happim.jpg", svi: true },
-  { name: "㈜미소드림", ceo: "윤한순", type: "인증", field: "환경·복지서비스", desc: "건물위생·시설관리, 고령자 등 취약계층 일자리 제공", tel: "", url: "" },
+  { name: "㈜미소드림", ceo: "윤한순", type: "인증", field: "환경·복지서비스", desc: "건물위생·시설관리, 고령자 등 취약계층 일자리 제공", tel: "", url: "", logo: "images/logos/misodream.gif" },
   { name: "세종아이콘", ceo: "김경오", type: "인증", field: "디자인·인쇄출판", desc: "인쇄, 디자인", tel: "", url: "https://blog.naver.com/sejongicon" },
   { name: "공유 사회적협동조합", ceo: "김온유", type: "인증", field: "제조·도소매", desc: "점보롤 화장지 제조", tel: "", url: "https://www.gongumall.kr" },
   { name: "㈜디에스", ceo: "김태용", type: "인증", field: "제조·도소매", desc: "빗자루 제조, 도·소매업", tel: "", url: "" },
