@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>세종사회적기업협의회</title>
+<meta name="description" content="세종사회적기업협의회 - 세종시 사회적기업 현황과 협의회 활동 소식">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+<a class="skip" href="#main">본문 바로가기</a>
+<header id="site-header"></header>
+<main id="main">
+<div class="hero"><div class="wrap">
+  <h1 id="hero-title"></h1>
+  <p id="hero-desc"></p>
+  <a class="btn" href="members.html">회원사 보기</a><a class="btn btn-line" href="about.html">협의회 소개</a>
+</div></div>
+
+<div class="wrap stats">
+  <div class="stat"><b id="stat-total">0</b><span>전체 회원사</span></div>
+  <div class="stat"><b id="stat-cert">0</b><span>인증 사회적기업</span></div>
+  <div class="stat"><b id="stat-pre">0</b><span>예비 사회적기업</span></div>
+  <div class="stat"><b id="stat-posts">0</b><span>활동 기록</span></div>
+</div>
+
+<section><div class="wrap grid grid-2">
+  <div>
+    <div class="sec-head"><h2>최근 활동</h2><a href="news.html">더보기 →</a></div>
+    <div id="home-activities" class="grid" style="grid-template-columns:1fr"></div>
+  </div>
+  <div>
+    <div class="sec-head"><h2>공지·소식</h2><a href="news.html">더보기 →</a></div>
+    <ul id="home-notices" class="notice-list"></ul>
+  </div>
+</div></section>
+
+<section class="soft"><div class="wrap">
+  <div class="sec-head"><h2>회원사 소개</h2><a href="members.html">전체 기업현황 →</a></div>
+  <div id="home-members" class="grid"></div>
+</div></section>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

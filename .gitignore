@@ -1,0 +1,10 @@
+# 기본은 전부 제외 — 공개할 사이트 파일만 허용 (이사회 자료 유출 방지)
+*
+!.gitignore
+!*.html
+!css/
+!css/**
+!js/
+!js/**
+!images/
+!images/**
