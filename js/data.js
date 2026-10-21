@@ -88,7 +88,7 @@ const HISTORY = [
 const ORGANIZATION = [
   { role: "회장", names: ["변미정 (도아협동조합)"] },
   { role: "부회장", names: ["황현중 (베리웰사회적협동조합)", "황성아 (가람수풀생태환경연구소)"] },
-  { role: "이사", names: ["허혜진 (㈜한그래)", "한근상 (㈜해피엠)"] },
+  { role: "이사", names: ["허혜진 (㈜한그래)", "한근상 (㈜해피엠)", "박상우 (㈜영풍위생방역)"] },
   { role: "감사", names: ["정경훈"] },
 ];
 
@@ -133,7 +133,7 @@ const MEMBERS = [
   { name: "세종아이콘", ceo: "김경오", type: "인증", field: "디자인·인쇄출판", desc: "인쇄, 디자인", tel: "", url: "" },
   { name: "공유 사회적협동조합", ceo: "김온유", type: "인증", field: "제조·도소매", desc: "점보롤 화장지 제조", tel: "", url: "" },
   { name: "㈜디에스", ceo: "김태용", type: "인증", field: "제조·도소매", desc: "빗자루 제조, 도·소매업", tel: "", url: "" },
-  { name: "영풍위생방역", ceo: "박상우", type: "인증", field: "환경·복지서비스", desc: "소독, 건물위생관리", tel: "", url: "" },
+  { name: "㈜영풍위생방역", ceo: "박상우", type: "인증", field: "환경·복지서비스", desc: "소독, 건물위생관리", tel: "", url: "" },
   { name: "(사)이음", ceo: "서원주", type: "인증", field: "교육·문화예술", desc: "교육, 학술연구, 행사", tel: "", url: "" },
   { name: "㈜해례", ceo: "김형기", type: "예비", field: "교육·문화예술", desc: "소프트웨어 개발, 애니메이션 제작, 교육·서비스업", tel: "", url: "" },
   { name: "바른기업", ceo: "이윤희", type: "예비", field: "시설·건설", desc: "전기·전문소방공사", tel: "", url: "" },
