@@ -5,45 +5,57 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>세종사회적기업협의회</title>
 <meta name="description" content="세종사회적기업협의회 - 세종시 사회적기업 현황과 협의회 활동 소식">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20261021">
+<link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20261021b">
 </head>
 <body data-page="home">
 <a class="skip" href="#main">본문 바로가기</a>
 <header id="site-header"></header>
 <main id="main">
-<div class="hero"><div class="wrap">
-  <h1 id="hero-title"></h1>
-  <p id="hero-desc"></p>
-  <a class="btn" href="members.html">회원사 보기</a><a class="btn btn-line" href="about.html">협의회 소개</a>
-</div></div>
-
-<div class="wrap stats">
-  <div class="stat"><b id="stat-total">0</b><span>전체 회원사</span></div>
-  <div class="stat"><b id="stat-cert">0</b><span>인증 사회적기업</span></div>
-  <div class="stat"><b id="stat-pre">0</b><span>예비 사회적기업</span></div>
-  <div class="stat"><b id="stat-posts">0</b><span>활동 기록</span></div>
+<div class="hero" aria-roledescription="슬라이드">
+  <div id="hero-slides"></div>
+  <div class="hero-text"><h1 id="hero-title"></h1><p id="hero-desc"></p></div>
+  <div id="hero-dots" class="hero-dots"></div>
 </div>
 
-<section><div class="wrap grid grid-2">
-  <div>
-    <div class="sec-head"><h2>최근 활동</h2><a href="news.html">더보기 →</a></div>
-    <div id="home-activities" class="grid" style="grid-template-columns:1fr"></div>
+<section><div class="wrap">
+  <h2 class="pill-title">협의회 안내</h2>
+  <div class="quick">
+    <a href="about.html#greeting-sec"><span class="ico"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="16" r="8"/><path d="M8 42c0-9 7-15 16-15s16 6 16 15"/></svg></span><b>인사말</b><small>세종사회적기업협의회를<br>소개합니다.</small></a>
+    <a href="about.html#business-sec"><span class="ico"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="15" width="36" height="25" rx="3"/><path d="M17 15v-5h14v5M6 26h36"/></svg></span><b>주요사업</b><small>네트워크·SVI·공동판로·<br>정책 제안</small></a>
+    <a href="members.html"><span class="ico"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 42V18l10-6v30M18 42V8h22v34M6 42h36M24 15h4M32 15h2M24 23h4M32 23h2M24 31h4M32 31h2"/></svg></span><b>회원사 현황</b><small id="quick-members"></small></a>
+    <a href="about.html#schedule-sec"><span class="ico"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="10" width="34" height="31" rx="3"/><path d="M7 19h34M16 6v8M32 6v8M15 27h4M22 27h4M29 27h4M15 34h4M22 34h4"/></svg></span><b>연간일정</b><small>2026년 협의회<br>사업 일정</small></a>
   </div>
-  <div>
-    <div class="sec-head"><h2>공지·소식</h2><a href="news.html">더보기 →</a></div>
-    <ul id="home-notices" class="notice-list"></ul>
+</div></section>
+
+<section class="news-sec"><div class="wrap news-row">
+  <div class="box notice-box">
+    <div class="box-side"><strong>소식을<br>전해드립니다.</strong><a href="news.html">더보기</a></div>
+    <div class="box-body">
+      <div class="box-head"><h2>공지·소식</h2><a class="plus" href="news.html" aria-label="공지·소식 더보기">+</a></div>
+      <ul id="home-notices" class="notice-list"></ul>
+    </div>
+  </div>
+  <div class="box activity-box">
+    <div class="box-head"><h2>최근 활동</h2><a class="plus" href="news.html" aria-label="최근 활동 더보기">+</a></div>
+    <div id="home-activity"></div>
   </div>
 </div></section>
 
 <section class="soft"><div class="wrap">
-  <div class="sec-head"><h2>회원사 소개</h2><a href="members.html">전체 기업현황 →</a></div>
+  <h2 class="pill-title">회원사 소개</h2>
   <div id="home-members" class="grid"></div>
+  <p class="center"><a class="btn" href="members.html">전체 기업현황 보기</a></p>
 </div></section>
+
+<section class="orgs-sec"><div class="wrap orgs" id="home-orgs"></div></section>
+
+<a class="map-band" href="about.html#location">
+  <span class="map-box"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 44s14-13 14-24a14 14 0 0 0-28 0c0 11 14 24 14 24z"/><circle cx="24" cy="20" r="5"/></svg><b>오시는길</b><small>협의회 위치를 확인하세요.</small></span>
+</a>
 </main>
 <footer id="site-footer"></footer>
-<script src="js/data.js?v=20261021"></script>
-<script src="js/common.js?v=20261021"></script>
+<script src="js/data.js?v=20261021b"></script>
+<script src="js/common.js?v=20261021b"></script>
 </body>
 </html>

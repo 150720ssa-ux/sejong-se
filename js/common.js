@@ -20,6 +20,7 @@ function filterMembers(list, field, keyword) {
 function renderLayout() {
   const page = location.pathname.split("/").pop() || "index.html";
   $("#site-header").innerHTML = `
+    <div class="wrap util"><a href="index.html">홈으로</a><a href="about.html#location">오시는 길</a><a href="mailto:${esc(SITE.email)}">문의하기</a></div>
     <div class="wrap header-inner">
       <a class="logo" href="index.html"><img src="${esc(SITE.logo)}" alt="${esc(SITE.name)}"></a>
       <button class="menu-btn" aria-expanded="false" aria-controls="gnb" aria-label="메뉴 열기">☰</button>
@@ -38,11 +39,11 @@ function renderLayout() {
     .map(([label, url]) => `<a href="${esc(url)}" target="_blank" rel="noopener">${label}</a>`).join("");
   $("#site-footer").innerHTML = `
     <div class="wrap">
-      <strong>${esc(SITE.name)}</strong>
-      <p>${esc(SITE.address)}</p>
-      <p>TEL ${esc(SITE.tel)} · FAX ${esc(SITE.fax)} · ${esc(SITE.email)} · 회장 ${esc(SITE.ceo)}</p>
+      <nav class="foot-links" aria-label="하단 메뉴">${MENU.map((m) => `<a href="${m.href}">${m.label}</a>`).join("")}</nav>
+      <p>${esc(SITE.name)} · 주소 : ${esc(SITE.address)}</p>
+      <p>대표전화 : <b class="tel">${esc(SITE.tel)}</b> · 팩스 : ${esc(SITE.fax)} · 이메일 : ${esc(SITE.email)} · 회장 ${esc(SITE.ceo)}</p>
       ${sns ? `<p class="sns">${sns}</p>` : ""}
-      <p class="copy">© ${new Date().getFullYear()} ${esc(SITE.nameEn)}. All rights reserved.</p>
+      <p class="copy">COPYRIGHT © ${new Date().getFullYear()} ${esc(SITE.nameEn)}. ALL RIGHTS RESERVED.</p>
     </div>`;
 }
 
@@ -65,17 +66,28 @@ const postCard = (p) => `
 
 const PAGES = {
   home() {
-    $("#hero-title").textContent = SITE.slogan;
-    $("#hero-desc").textContent = SITE.intro;
-    $("#stat-total").textContent = MEMBERS.length;
-    $("#stat-cert").textContent = MEMBERS.filter((m) => m.type === "인증").length;
-    $("#stat-pre").textContent = MEMBERS.filter((m) => m.type === "예비").length;
-    $("#stat-posts").textContent = POSTS.filter((p) => p.category === "활동").length;
+    $("#hero-title").textContent = "함께 성장하는 세종, 사회적기업이 만들어갑니다";
+    $("#hero-desc").textContent = SITE.slogan;
+    $("#hero-slides").innerHTML = HERO_IMAGES.map((src, i) => `<img src="${esc(src)}" alt=""${i ? ' loading="lazy"' : ' class="on"'}>`).join("");
+    $("#hero-dots").innerHTML = HERO_IMAGES.map((_, i) => `<button type="button" aria-label="${i + 1}번 사진"${i ? "" : ' aria-current="true"'}></button>`).join("");
+    const slides = document.querySelectorAll("#hero-slides img"), dots = document.querySelectorAll("#hero-dots button");
+    let cur = 0;
+    const show = (n) => {
+      slides[cur].classList.remove("on"); dots[cur].removeAttribute("aria-current");
+      cur = n % slides.length;
+      slides[cur].classList.add("on"); dots[cur].setAttribute("aria-current", "true");
+    };
+    dots.forEach((d, i) => d.addEventListener("click", () => show(i)));
+    if (slides.length > 1 && !matchMedia("(prefers-reduced-motion: reduce)").matches) setInterval(() => show(cur + 1), 5000);
+
+    $("#quick-members").innerHTML = `인증 ${MEMBERS.filter((m) => m.type === "인증").length} · 예비 ${MEMBERS.filter((m) => m.type === "예비").length}<br>총 ${MEMBERS.length}개 회원사`;
     const posts = [...POSTS].sort(byDateDesc);
-    $("#home-activities").innerHTML = posts.filter((p) => p.category === "활동").slice(0, 3).map(postCard).join("");
     $("#home-notices").innerHTML = posts.filter((p) => p.category !== "활동").slice(0, 5)
-      .map((p) => `<li><a href="news.html"><span class="tag">${esc(p.category)}</span>${esc(p.title)}</a><time>${esc(p.date)}</time></li>`).join("");
+      .map((p) => `<li><a href="news.html">${esc(p.title)}</a><time>${esc(p.date)}</time></li>`).join("");
+    const act = posts.find((p) => p.category === "활동" && p.image) || posts.find((p) => p.category === "활동");
+    $("#home-activity").innerHTML = act ? `<a class="activity" href="news.html">${act.image ? `<img src="${esc(act.image)}" alt="${esc(act.title)}">` : ""}<strong>${esc(act.title)}</strong><time>${esc(act.date)}</time></a>` : "";
     $("#home-members").innerHTML = MEMBERS.slice(0, 6).map(memberCard).join("");
+    $("#home-orgs").innerHTML = RELATED_ORGS.map((o) => `<a href="${esc(o.url)}" target="_blank" rel="noopener">${esc(o.name)}</a>`).join("");
   },
 
   about() {

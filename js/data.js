@@ -23,6 +23,20 @@ const SITE = {
   },
 };
 
+// 메인 큰 사진 (5초마다 넘어감). images 폴더에 넣고 경로 추가
+const HERO_IMAGES = [
+  "images/2026-muju-group.jpg",
+  "images/2026-muju-hackathon.jpg",
+  "images/2026-muju-rafting.jpg",
+];
+
+// 메인 하단 관련기관 링크
+const RELATED_ORGS = [
+  { name: "세종특별자치시", url: "https://www.sejong.go.kr" },
+  { name: "한국사회적기업진흥원", url: "https://www.socialenterprise.or.kr" },
+  { name: "고용노동부", url: "https://www.moel.go.kr" },
+];
+
 // 인사말 (문단마다 한 줄)
 const GREETING = {
   name: "세종사회적기업협의회 회장 변미정",
