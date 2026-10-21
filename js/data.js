@@ -122,7 +122,7 @@ const SCHEDULE = [
 // 회원사(기업현황) — 2026년 정기총회 책자 + 2026.10 명절선물세트 정회원사 명단(20개사) 기준
 //  type·field가 ""이면 태그를 표시하지 않음 (확인되면 채우기)
 //  type: 인증 / 예비
-//  field: 분야 (아래 FIELDS 중 하나)
+//  field: 분야 (아래 FIELDS 중 하나, 여러 개면 ["…", "…"])
 //  url: 홈페이지 없으면 ""
 //  logo: images/logos 폴더의 로고 (없으면 생략)
 //  svi: true 이면 'SVI 우수' 배지 표시 (2026 사회적가치지표 측정 우수)
@@ -130,7 +130,7 @@ const SCHEDULE = [
 const FIELDS = ["제조·도소매", "환경·복지서비스", "교육·문화예술", "디자인·인쇄출판", "시설·건설"];
 
 const MEMBERS = [
-  { name: "도아협동조합", ceo: "변미정", type: "인증", field: "제조·도소매", desc: "교육·서비스업, 화장품 제조", tel: "", url: "https://smartstore.naver.com/doasoup", logo: "images/logos/doa.png", svi: true },
+  { name: "도아협동조합", ceo: "변미정", type: "인증", field: ["제조·도소매", "교육·문화예술", "디자인·인쇄출판"], desc: "교육·서비스업, 화장품 제조", tel: "", url: "https://smartstore.naver.com/doasoup", logo: "images/logos/doa.png", svi: true },
   { name: "베리웰사회적협동조합", ceo: "황현중", type: "인증", field: "디자인·인쇄출판", desc: "HACCP 인증 세종약과 제조, 디자인·인쇄·판촉물", tel: "", url: "", svi: true },
   { name: "가람수풀생태환경연구소", ceo: "황성아", type: "인증", field: "환경·복지서비스", desc: "환경·산림교육, 산림치유, 노르딕워킹 프로그램, 학술연구", tel: "", url: "http://www.garamsoop.com", logo: "images/logos/garamsoop.png", svi: true },
   { name: "㈜한그래", ceo: "허혜진", type: "인증", field: "교육·문화예술", desc: "생활나전공예·전통 장정 등 전통문화예술 상품과 체험교육", tel: "", url: "", logo: "images/logos/hangrae.jpg", svi: true },

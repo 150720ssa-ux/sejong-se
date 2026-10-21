@@ -10,10 +10,13 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "
 const $ = (sel) => document.querySelector(sel);
 const byDateDesc = (a, b) => b.date.localeCompare(a.date);
 
+// field는 문자열 또는 배열(여러 분야)
+const fieldsOf = (m) => [].concat(m.field || []);
+
 function filterMembers(list, field, keyword) {
   const k = keyword.trim().toLowerCase();
   return list.filter((m) =>
-    (field === "전체" || m.field === field) &&
+    (field === "전체" || fieldsOf(m).includes(field)) &&
     (!k || (m.name + m.desc).toLowerCase().includes(k)));
 }
 
@@ -51,7 +54,7 @@ const memberCard = (m) => `
   <article class="card member">
     ${m.svi ? `<span class="svi-badge" title="2026 사회적가치지표(SVI) 측정 우수"><img src="images/svi-excellent.png" alt=""><b>SVI 우수</b></span>` : ""}
     ${m.logo ? `<div class="member-logo"><img src="${esc(m.logo)}" alt="${esc(m.name)} 로고" loading="lazy"></div>` : ""}
-    <div class="tags">${m.type ? `<span class="tag tag-${m.type === "인증" ? "cert" : "pre"}">${esc(m.type)}사회적기업</span>` : ""}${m.field ? `<span class="tag">${esc(m.field)}</span>` : ""}</div>
+    <div class="tags">${m.type ? `<span class="tag tag-${m.type === "인증" ? "cert" : "pre"}">${esc(m.type)}사회적기업</span>` : ""}${fieldsOf(m).map((f) => `<span class="tag">${esc(f)}</span>`).join("")}</div>
     <h3>${m.url ? `<a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.name)}</a>` : esc(m.name)}</h3>
     <p>${esc(m.desc)}</p>
     ${m.ceo ? `<p class="meta">대표 ${esc(m.ceo)}</p>` : ""}
@@ -141,6 +144,7 @@ const PAGES = {
 
 // 필터 자체 점검 (콘솔에 실패만 표시)
 console.assert(filterMembers([{ name: "가", desc: "환경", field: "환경" }, { name: "나", desc: "", field: "교육" }], "환경", "").length === 1, "filterMembers: field");
+console.assert(filterMembers([{ name: "다", desc: "", field: ["제조", "교육"] }], "교육", "").length === 1, "filterMembers: multi field");
 console.assert(filterMembers([{ name: "초록", desc: "", field: "환경" }], "전체", " 초록 ").length === 1, "filterMembers: keyword");
 
 renderLayout();
