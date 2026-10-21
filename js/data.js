@@ -150,7 +150,7 @@ const POSTS = [
   },
   {
     category: "활동", date: "2026-06-14", title: "2026 무주 워크숍 – 회원사 소통과 화합",
-    image: "images/2026-muju-atv.jpg",
+    image: "images/2026-muju-group.jpg",
     body: "해커톤과 함께 래프팅, ATV 체험, 덕유산 산림욕 프로그램으로 회원사 간 소통과 화합의 시간을 가졌습니다.",
   },
   {
