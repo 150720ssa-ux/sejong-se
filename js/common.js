@@ -85,7 +85,7 @@ const PAGES = {
     const posts = [...POSTS].sort(byDateDesc);
     $("#home-notices").innerHTML = posts.filter((p) => p.category !== "활동").slice(0, 5)
       .map((p) => `<li><a href="news.html">${esc(p.title)}</a><time>${esc(p.date)}</time></li>`).join("");
-    const act = posts.find((p) => p.category === "활동" && p.image) || posts.find((p) => p.category === "활동");
+    const act = posts.find((p) => p.home) || posts.find((p) => p.category === "활동" && p.image) || posts.find((p) => p.category === "활동");
     $("#home-activity").innerHTML = act ? `<a class="activity" href="news.html">${act.image ? `<img src="${esc(act.image)}" alt="${esc(act.title)}">` : ""}<strong>${esc(act.title)}</strong><time>${esc(act.date)}</time></a>` : "";
     $("#home-members").innerHTML = MEMBERS.slice(0, 6).map(memberCard).join("");
     $("#home-orgs").innerHTML = RELATED_ORGS.map((o) => `<a href="${esc(o.url)}" target="_blank" rel="noopener">${esc(o.name)}</a>`).join("");
