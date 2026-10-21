@@ -36,6 +36,8 @@ const RELATED_ORGS = [
   { name: "한국사회적기업진흥원", url: "https://www.socialenterprise.or.kr" },
   { name: "사회적기업 포털", url: "https://www.seis.or.kr" },
   { name: "고용노동부", url: "https://www.moel.go.kr" },
+  { name: "세종일자리경제진흥원", url: "https://www.sjepa.or.kr" },
+  { name: "따사누리", url: "https://www.dsnuri.com" },
 ];
 
 // 인사말 (문단마다 한 줄)
