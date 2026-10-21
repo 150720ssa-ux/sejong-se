@@ -65,6 +65,7 @@ const postCard = (p) => `
     <div class="tags"><span class="tag tag-${p.category === "공지" ? "notice" : "cert"}">${esc(p.category)}</span><time>${esc(p.date)}</time></div>
     <h3>${esc(p.title)}</h3>
     <p>${esc(p.body)}</p>
+    ${p.link ? `<p class="post-link"><a class="btn" href="${esc(p.link)}" target="_blank" rel="noopener">${esc(p.linkLabel || "바로가기")}</a></p>` : ""}
   </article>`;
 
 const PAGES = {
