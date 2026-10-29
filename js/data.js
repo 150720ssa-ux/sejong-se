@@ -38,6 +38,7 @@ const RELATED_ORGS = [
   { name: "고용노동부", url: "https://www.moel.go.kr" },
   { name: "세종일자리경제진흥원", url: "https://www.sjepa.or.kr" },
   { name: "따사누리", url: "https://www.dsnuri.com" },
+  { name: "상생누리", url: "https://www.winwinnuri.or.kr" },
 ];
 
 // 인사말 (문단마다 한 줄)
